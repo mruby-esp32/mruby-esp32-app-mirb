@@ -1,32 +1,35 @@
 # mruby-esp32-app-mirb
-mirb (Embeddable Interactive Ruby Shell) for ESP32
+
+mirb (Embeddable Interactive Ruby Shell) for ESP32.
 
 ![screen](images/screen.png)
 
+*This project is made with reference to [carsonmcdonald/mruby-esp32](https://github.com/carsonmcdonald/mruby-esp32), many thanks.*
+
 ## Build with ESP-IDF
 
-This project requires [ESP-IDF](https://github.com/espressif/esp-idf). Please setup it beforehand.
+0) This project requires [ESP-IDF](https://github.com/espressif/esp-idf). Please setup it beforehand.
 
 1) Clone the code
 
-```
-$ git clone --recursive https://github.com/pandax381/mruby-esp32-app-mirb.git
-$ cd mruby-esp32-app-mirb
-```
+	```
+	$ git clone --recursive https://github.com/pandax381/mruby-esp32-app-mirb.git
+	$ cd mruby-esp32-app-mirb
+	```
 
 2) Setup serial-port
 
-```
-$ make menuconfig
-```
+	```
+	$ make menuconfig
+	```
 
-  `Serial flasher config` > `Default serial port` > `/dev/cu.xxx`
+	`Serial flasher config` > `Default serial port` > `/dev/cu.xxx`
   
 3) Build project
 
-```
-$ make
-```
+	```
+	$ make
+	```
 
 ## Flash & Run
 
