@@ -38,3 +38,17 @@ $ make flash monitor
 ```
 
 Startup mirb, REPL (Read–eval–print loop)
+
+## Configuration
+
+If you want to add mrbgems please edit `components/mruby/build_config.rb`.
+
+```ruby
+MRuby::CrossBuild.new('esp32') do |conf|
+
+  # ...(snip)...
+
+  comf.gem :github => 'xxx/xxx'
+
+end
+```
