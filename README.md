@@ -13,7 +13,7 @@ mirb (Embeddable Interactive Ruby Shell) for ESP32.
 1) Clone the code
 
 	```
-	$ git clone --recursive https://github.com/pandax381/mruby-esp32-app-mirb.git
+	$ git clone --recursive https://github.com/mruby-esp32/mruby-esp32-app-mirb.git
 	$ cd mruby-esp32-app-mirb
 	```
 
