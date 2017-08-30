@@ -31,6 +31,8 @@ mirb (Embeddable Interactive Ruby Shell) for ESP32.
 	$ make
 	```
 
+> *Note: If you update ESP-IDF and sdkconfig is changed, please set `CONFIG_FREERTOS_UNICORE=y`.*
+
 ## Flash & Run
 
 ```
