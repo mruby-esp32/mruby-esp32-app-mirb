@@ -137,5 +137,5 @@ mirb_task(void *pvParameter)
 void
 app_main()
 {
-  xTaskCreate(&mirb_task, "mirb_task", 8192, NULL, 5, NULL);
+  xTaskCreate(&mirb_task, "mirb_task", 16384, NULL, 5, NULL);
 }
