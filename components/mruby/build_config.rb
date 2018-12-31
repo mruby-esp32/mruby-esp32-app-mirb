@@ -77,5 +77,11 @@ MRuby::CrossBuild.new('esp32') do |conf|
   conf.gem :core => "mruby-compiler"
   conf.gem :core => "mruby-kernel-ext"
   conf.gem :core => "mruby-class-ext"
+  conf.gem :github => 'mruby-esp32/mruby-esp32-gpio'
+  conf.gem :github => "mruby-esp32/mruby-esp32-system"
+  # ext_esp_err is a dependecy of esp-nvs
+  conf.gem :github => "hanachin/mruby-esp32-ext_esp_err"
+  conf.gem :github => "mruby-esp32/mruby-esp32-nvs"
+  conf.gem :github => "mruby-esp32/mruby-esp32-wifi"
 
 end

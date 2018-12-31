@@ -1,6 +1,7 @@
 # mruby-esp32-app-mirb
 
 mirb (Embeddable Interactive Ruby Shell) for ESP32.
+[Version française](README-FR.md)
 
 ![screen](images/screen.png)
 
@@ -48,9 +49,13 @@ If you want to add mrbgems please edit `components/mruby/build_config.rb`.
 ```ruby
 MRuby::CrossBuild.new('esp32') do |conf|
 
-  # ...(snip)...
+  # ...(code)...
 
-  comf.gem :github => 'xxx/xxx'
+  # add wifi gem
+  conf.gem :github => "mruby-esp32/mruby-esp32-wifi"
+  # add gpio gem
+  conf.gem :github => 'mruby-esp32/mruby-esp32-gpio'
 
 end
 ```
+
