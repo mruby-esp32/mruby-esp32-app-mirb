@@ -5,6 +5,8 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "rom/uart.h"
+/* nvs init is necessary to use wifi */
+#include "nvs_flash.h"
 
 #undef getchar
 #define getchar uart_getchar
@@ -137,5 +139,7 @@ mirb_task(void *pvParameter)
 void
 app_main()
 {
+  /* nvs init is necessary to use wifi */
+  nvs_flash_init();
   xTaskCreate(&mirb_task, "mirb_task", 16384, NULL, 5, NULL);
 }
