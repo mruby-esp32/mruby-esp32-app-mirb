@@ -32,7 +32,7 @@ MRuby::CrossBuild.new('esp32') do |conf|
     cc.include_paths << ENV["COMPONENT_INCLUDES"].split(' ')
 
     cc.flags << '-Wno-maybe-uninitialized'
-    cc.flags.collect! { |x| x.gsub('-MP', '') }
+    cc.flags = cc.flags.flatten.collect { |x| x.gsub('-MP', '') }
 
     cc.defines << %w(MRB_HEAP_PAGE_SIZE=64)
     cc.defines << %w(MRB_USE_IV_SEGLIST)
@@ -45,7 +45,7 @@ MRuby::CrossBuild.new('esp32') do |conf|
   conf.cxx do |cxx|
     cxx.include_paths = conf.cc.include_paths.dup
 
-    cxx.flags.collect! { |x| x.gsub('-MP', '') }
+    cxx.flags = cxx.flags.flatten.collect { |x| x.gsub('-MP', '') }
 
     cxx.defines = conf.cc.defines.dup
   end
@@ -70,9 +70,9 @@ MRuby::CrossBuild.new('esp32') do |conf|
   conf.gem :core => "mruby-random"
   conf.gem :core => "mruby-object-ext"
   conf.gem :core => "mruby-objectspace"
-  conf.gem :core => "mruby-fiber"
-  conf.gem :core => "mruby-enumerator"
-  conf.gem :core => "mruby-enum-lazy"
+  #conf.gem :core => "mruby-fiber"
+  #conf.gem :core => "mruby-enumerator"
+  #conf.gem :core => "mruby-enum-lazy"
   conf.gem :core => "mruby-toplevel-ext"
   conf.gem :core => "mruby-compiler"
   conf.gem :core => "mruby-kernel-ext"
