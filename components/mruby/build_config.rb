@@ -40,6 +40,8 @@ MRuby::CrossBuild.new('esp32') do |conf|
     cc.defines << %w(MRB_STR_BUF_MIN_SIZE=20)
     cc.defines << %w(MRB_GC_STRESS)
     cc.defines << %w(POOL_PAGE_SIZE=256)
+    cc.defines << %w(MRB_NO_BOXING)
+    cc.defines << %w(MRB_USE_METHOD_T_STRUCT)
   end
 
   conf.cxx do |cxx|
